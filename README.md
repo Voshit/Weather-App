@@ -46,7 +46,15 @@ This project uses **API Keys** that are kept secure. To run this project:
 
 ## 📸 Screenshots
 
-*(Add your screenshots here)*
+<p align="center">
+  <img src="screenshots/ss_1.jpeg" width="200" alt="Home Screen" />
+  <img src="screenshots/ss_2.jpeg" width="200" alt="Details" />
+  <img src="screenshots/ss_3.jpeg" width="200" alt="Forecast" />
+</p>
+<p align="center">
+  <img src="screenshots/ss_4.jpeg" width="200" alt="Map" />
+  <img src="screenshots/ss_5.jpeg" width="200" alt="Settings" />
+</p>
 
 ---
 *Developed with ❤️ by [Your Name]*
