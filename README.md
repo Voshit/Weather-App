@@ -28,7 +28,28 @@ A modern, feature-rich Android weather application that provides real-time forec
     -   Open-Meteo (Weather Data)
     -   Hugging Face Inference API (AI Summaries)
     -   Google Location Services (GPS)
--   **UI Components**: MPAndroidChart, Lottie Animations, SDP, RoastedToast.
+-   **UI Components**: MPAndroidChart, Lottie Animations, SDP, RoastedToast?
+
+## 🎓 College Project Friendly
+
+This project is an excellent template for college/university final year projects due to its structured approach and use of modern technologies:
+
+- **Clean Architecture**: Follows **MVC (Model-View-Controller)** pattern, keeping logic separated from UI.
+- **Hybrid Database System**: Demonstrates complex data handling by combining **Local (Room)** and **Cloud (Firebase)** databases.
+- **Real-World Integration**: Uses live APIs for Weather and Maps, plus AI integration for smart summaries.
+- **Authentication Flow**: Complete user management system (Login, Signup, Forgot Password, Google Auth).
+
+## 💾 Database Implementation
+
+### 1. Local Database (Android Room)
+The app uses an internal SQLite database (via Room Library) to provide **Offline Capability**.
+- **`WeatherCacheEntity`**: Stores the raw JSON response from the weather API. If the internet is disconnected, the app retrieves and parses this cached data to show the last known weather.
+- **`CityEntity`**: Stores the user's saved cities locally for quick access.
+
+### 2. Cloud Database (Firebase Firestore)
+Used for data persistence across devices.
+- **`User` Collection**: Stores user profile data and **Settings Preferences** (e.g., Celsius vs Fahrenheit, Wind Speed Units).
+- This ensures that if a user logs in on a different phone, their specific settings are automatically synced.
 
 ## ⚙️ Setup & Configuration
 
@@ -57,4 +78,4 @@ This project uses **API Keys** that are kept secure. To run this project:
 </p>
 
 ---
-*Developed with ❤️ by [Your Name]*
+*Developed with ❤️ by Voshit*
