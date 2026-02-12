@@ -1,0 +1,36 @@
+# Weather App - Project Details
+
+## 1. Technical Stack
+-   **Language**: Java (Native Android)
+-   **Architecture**: MVC (Model-View-Controller) pattern
+-   **Minimum SDK**: Android 5.0 (API 21)
+-   **Target SDK**: Android 13 (API 33)
+
+## 2. APIs & Data Sources (Crucial)
+-   **Open-Meteo API**: primary source for weather data (Temp, Rain, UV, AQI).
+    -   *Endpoints used*: `/v1/forecast`, `/v1/air-quality`
+-   **Windy.com**:
+    -   *Purpose*: Provides the interactive weather map layer (Precipitation/Temperature overlay).
+    -   *Integration*: Embedded via WebView.
+-   **Hugging Face API**:
+    -   *Purpose*: Generates AI-powered "Smart Summaries" of the weather.
+    -   *Model*: Text-generation (GPT/Llama based).
+-   **Google Location Services**:
+    -   *Purpose*: GPS/FusedLocation for finding user's current city.
+
+## 3. Backend (Firebase)
+-   **Authentication**:
+    -   Email/Password Login
+    -   Google Sign-In (OAuth)
+-   **Firestore Database (Cloud)**:
+    -   Stores User Profiles (Name, Email).
+    -   Syncs settings (Units: C/F, Wind: km/h vs m/s) across devices.
+
+## 4. Local Database (Room)
+-   **Purpose**: Offline capabilities.
+-   **Function**: Caches the last known weather data so the app loads instantly without internet.
+
+## 5. Key Libraries
+-   **Networking**: Volley (JSON parsing)
+-   **Graphs**: MPAndroidChart (Line charts for temp/rain)
+-   **UI**: Lottie (Animations), SDP (Screen sizing), RoastedToast (Custom alerts).

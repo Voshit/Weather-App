@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/day_root_layout"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="6dp"
+    android:background="@drawable/bg_glass_card"
+    android:paddingVertical="12dp"
+    android:paddingHorizontal="8dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/day_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-bold"
+        android:text="Mon"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="13 Feb"
+        android:textColor="@color/textColorSecondary"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day_tv" />
+
+    <ImageView
+        android:id="@+id/day_icon_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/clear_day"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_tv" />
+
+    <TextView
+        android:id="@+id/temp_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-bold"
+        android:text="26°"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day_icon_iv" />
+        
+    <TextView
+         android:id="@+id/aqi_badge"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:minWidth="40dp"
+         android:background="@drawable/bg_aqi_badge"
+         android:gravity="center"
+         android:text="194"
+         android:textColor="@android:color/white"
+         android:textSize="11sp"
+         android:fontFamily="sans-serif-bold"
+         android:paddingHorizontal="8dp"
+         android:paddingVertical="4dp"
+         android:layout_marginTop="6dp"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/temp_tv"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

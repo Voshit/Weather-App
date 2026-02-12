@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mainBGColor">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        app:navigationIcon="@drawable/ic_back">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile &amp; Settings"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-bold"
+            android:textColor="@color/textColorPrimary"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- User Info Card -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_glass_card"
+                android:padding="24dp"
+                android:layout_marginBottom="24dp">
+                
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_person"
+                    app:tint="@color/textColorPrimary"
+                    android:background="@drawable/bg_white_card"
+                    android:padding="12dp"
+                    android:backgroundTint="@color/white_overlay"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Loading Name..."
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-bold"
+                    android:textColor="@color/textColorPrimary"
+                    app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+                    app:layout_constraintTop_toTopOf="@+id/iv_avatar"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="loading@email.com"
+                    android:textSize="14sp"
+                    android:textColor="@color/textColorSecondary"
+                    app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Manage Cities Button -->
+            <Button
+                android:id="@+id/btn_manage_cities"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Manage Cities"
+                android:fontFamily="sans-serif-bold"
+                android:background="@drawable/bg_button_gradient"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="24dp"
+                app:backgroundTint="@null"/>
+
+            <!-- Preferences Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_glass_card"
+                android:padding="20dp"
+                android:layout_marginBottom="24dp">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preferences"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-bold"
+                    android:textColor="@color/textColorPrimary"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Temp Unit -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Temperature Unit"
+                    android:textColor="@color/textColorSecondary"
+                    android:layout_marginBottom="8dp"/>
+                
+                <RadioGroup
+                    android:id="@+id/rg_temp_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+                    
+                    <RadioButton
+                        android:id="@+id/rb_celsius"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Celsius (°C)"
+                        android:textColor="@color/textColorPrimary"
+                        android:buttonTint="@color/purplePill"
+                        android:paddingEnd="16dp"/>
+                    
+                    <RadioButton
+                        android:id="@+id/rb_fahrenheit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fahrenheit (°F)"
+                        android:buttonTint="@color/purplePill"
+                        android:textColor="@color/textColorPrimary"/>
+                </RadioGroup>
+
+                <!-- Wind Unit -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wind Speed Unit"
+                    android:textColor="@color/textColorSecondary"
+                    android:layout_marginBottom="8dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_wind_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <RadioButton
+                        android:id="@+id/rb_kmh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="km/h"
+                        android:textColor="@color/textColorPrimary"
+                        android:buttonTint="@color/purplePill"
+                        android:paddingEnd="16dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_ms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="m/s"
+                        android:buttonTint="@color/purplePill"
+                        android:textColor="@color/textColorPrimary"/>
+                </RadioGroup>
+
+                <!-- AQI Toggle -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+                    
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Show AQI Card"
+                        android:textColor="@color/textColorPrimary"/>
+
+                    <Switch
+                        android:id="@+id/switch_aqi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumbTint="@color/purplePill"
+                        android:trackTint="@color/white_overlay"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Logout"
+                android:fontFamily="sans-serif-bold"
+                android:background="@drawable/bg_button_logout"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@null"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

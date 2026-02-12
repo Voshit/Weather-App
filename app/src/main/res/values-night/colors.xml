@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="black">#FFFFFFFF</color>
+    <color name="white">#FF000000</color>
+
+    <!-- App Colors -->
+    <color name="mainBGColor">#121212</color>
+    <color name="cardGradientStart">#311B92</color>
+    <color name="cardGradientEnd">#0D47A1</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="textColorSecondary">#B0BEC5</color>
+    <color name="purplePill">#EA80FC</color>
+    <color name="blueAccent">#82B1FF</color>
+    <color name="white_overlay">#1AFFFFFF</color>
+</resources>
